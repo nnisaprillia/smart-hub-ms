@@ -26,8 +26,8 @@ class StoreEquipmentRequest extends FormRequest
             'name'        => 'required|string|max:255',
             'category'    => 'required|string',
             'stock'       => 'required|integer|min:0',
-            'condition'   => 'required|in:good,damaged,lost',
-            'status'      => 'required|in:available,borrowed',
+            // 'condition'   => 'nullable',
+            // 'status'      => 'nullable',
             'image'       => 'nullable|image|max:2048',
             'description' => 'nullable|string',
         ];

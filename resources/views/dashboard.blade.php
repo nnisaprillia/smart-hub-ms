@@ -279,7 +279,7 @@
                                     @else bg-gray-100 text-gray-800 @endif">
                                     {{ ucfirst($borrowing->status) }}
                                 </span>
-                                @if(in_array($borrowing->status, ['pending', 'approved']))
+                                @if(in_array($borrowing->status, ['pending']))
                                 <form method="POST" action="{{ route('borrowings.cancel', $borrowing) }}" class="inline-block" onsubmit="return confirm('Batalkan peminjaman ini?')">
                                     @csrf
                                     @method('PATCH')
