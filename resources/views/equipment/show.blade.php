@@ -28,14 +28,14 @@
                                 <h3 class="text-lg font-semibold text-gray-900">Jumlah Stok</h3>
                                 <p class="mt-1 text-gray-700">{{ $equipment->stock }}</p>
                             </div>
-                            <div>
+                            {{-- <div>
                                 <h3 class="text-lg font-semibold text-gray-900">Kondisi</h3>
                                 <p class="mt-1 text-gray-700">{{ ucfirst($equipment->condition) }}</p>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-gray-900">Status</h3>
                                 <p class="mt-1 text-gray-700">{{ ucfirst($equipment->status) }}</p>
-                            </div>
+                            </div> --}}
                         </div>
 
                         <div class="space-y-4">

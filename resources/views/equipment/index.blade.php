@@ -30,8 +30,8 @@
                                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Peralatan</th>
                                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kategori</th>
                                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stok</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kondisi</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                        {{-- <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kondisi</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th> --}}
                                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Aksi</th>
                                     </tr>
                                 </thead>
@@ -65,7 +65,7 @@
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium">
                                             {{ $item->stock }}
                                         </td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
+                                        {{-- <td class="px-6 py-4 whitespace-nowrap">
                                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
                                                 @if($item->condition === 'good') bg-green-100 text-green-800
                                                 @elseif($item->condition === 'damaged') bg-red-100 text-red-800
@@ -81,7 +81,7 @@
                                                 @else bg-blue-100 text-blue-800 @endif">
                                                 {{ $item->status === 'available' ? 'Tersedia' : 'Dipinjam' }}
                                             </span>
-                                        </td>
+                                        </td> --}}
                                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                                             <a href="{{ route('equipment.show', $item) }}" class="inline-flex items-center px-3 py-1 rounded-md text-sm font-medium text-indigo-700 bg-indigo-100 hover:bg-indigo-200 transition-colors">
                                                 <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

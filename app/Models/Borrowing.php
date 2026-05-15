@@ -41,4 +41,35 @@ class Borrowing extends Model
     {
         return $this->hasMany(CheckIn::class);
     }
+
+    public function statusForCurrentTime(): string
+    {
+        if (! $this->start_date || ! $this->end_date) {
+            return $this->status;
+        }
+
+        $now = now();
+
+        if ($now->greaterThanOrEqualTo($this->end_date)) {
+            return 'completed';
+        }
+
+        if ($now->greaterThanOrEqualTo($this->start_date)) {
+            return 'active';
+        }
+
+        return 'approved';
+    }
+
+    public function syncStatusWithTime(): self
+    {
+        $newStatus = $this->statusForCurrentTime();
+
+        if ($this->status !== $newStatus) {
+            $this->status = $newStatus;
+            $this->save();
+        }
+
+        return $this;
+    }
 }
